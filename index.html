@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>欢迎使用新能源电池防爆报警器</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background-color: #fff;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #333;
+            font-size: 24px;
+        }
+        .intro {
+            color: #555;
+            font-size: 16px;
+            text-align: center; 
+            margin: 20px 0;
+        }
+        p {
+            color: #555;
+            font-size: 16px;
+            text-align: left;
+            margin: 5px 0;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>欢迎使用新能源电池防爆报警器</h1>
+        <div class="intro">
+            <p>本产品可用于新能源电池防爆预警</p>
+            <p>本产品特点为可以通过设置不同的数据</p>
+            <p>可以应用与不同场景不同型号的电池防爆</p>
+            <p>初次使用时请选择设置按钮进行设置</p>
+            <p>查看按钮可观测预警信息</p>
+        </div>
+        <button id="settingsButton">设置</button>
+        <button id="viewButton">查看</button>
+        <button id="resetButton">复位</button>
+    </div>
+
+    <script>
+        var initialTemperature = 21.00
+        var initialPressure = 0.00
+
+        document.getElementById("settingsButton").addEventListener("click", function() {
+            window.location.href = "./setting.html"; 
+        });
+
+        document.getElementById("viewButton").addEventListener("click", function() {
+            var url = "view.html?temperature=" + initialTemperature + "&pressure=" + initialPressure;
+            window.location.href = url;
+        });
+
+        document.getElementById("resetButton").addEventListener("click", function() {
+            initialTemperature = 21.00
+            initialPressure = 0.00
+        });
+    </script>
+</body>
+</html>
